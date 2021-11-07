@@ -11,7 +11,7 @@ WORKDIR /usr/app/src
 USER node
 RUN git init .
 RUN git remote add origin https://github.com/matsinsweden/nibepi.git
-RUN git pull origin snapshot
+RUN git pull origin master
 RUN npm install -only=production
 USER root
 RUN apt-get remove --purge -y \
